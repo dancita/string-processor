@@ -20,7 +20,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\src\StringProcessor.csproj" />
+      <ProjectReference Include="..\src\StringProcessor\StringProcessor.csproj" />
     </ItemGroup>
 
 </Project>

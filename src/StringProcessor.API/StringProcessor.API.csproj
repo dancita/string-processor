@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\StringProcessor.csproj" />
+    <ProjectReference Include="..\StringProcessor\StringProcessor.csproj" />
   </ItemGroup>
 
 </Project>
