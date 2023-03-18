@@ -52,7 +52,22 @@ namespace StringProcessor.Tests
             Assert.Equal(23, results.NumberOfCharacters);
             Assert.Equal(6, results.NumberOfWords);
         }
-        
+
         // TODO: For bonus points, write a unit test which tests very large input to the StringStatsProcessor.Run(string) method.
+        [Theory]
+        [InlineData(5000)]
+        [InlineData(10000)]
+        [InlineData(1000)]
+        public void Run_LargeInputNoSpace_ReturnsStats(int stringLength)
+        {
+            string testData = new('a', stringLength);
+            var subject = new StringStatsProcessor();
+
+            StringStatsModel results = subject.Run(testData);
+
+            Assert.Equal(stringLength, results.LongestWordNumberOfCharacters);
+            Assert.Equal(stringLength, results.NumberOfCharacters);
+            Assert.Equal(1, results.NumberOfWords);
+        }
     }
 }
